@@ -1,0 +1,22 @@
+[package]
+name = "aurora_dsql_sample"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { version = "1.1.7" ,features = ["behavior-version-latest"]}
+tokio = { version = "1", features = ["full"] }
+aws-sdk-dsql = "1.1.0"
+serde_json = "1.0.64"
+serde = { version = "1.0", features = ["derive"]}
+axum = "0.6.0"
+sqlx = { version="0.8.3", features = [ "postgres", "runtime-tokio-native-tls"] }
+chrono = { version="0.4.39" }
+anyhow = { version="1.0.95" }
+tracing-subscriber = "0.3.19"
+opentelemetry-otlp = "0.27.0"
+tracing = "0.1.41"
+tracing-opentelemetry = "0.28.0"
+opentelemetry-aws = "0.15.0"
+opentelemetry = "0.27.1"
+opentelemetry_sdk = { version = "0.27.1", features = ["rt-tokio"] }
