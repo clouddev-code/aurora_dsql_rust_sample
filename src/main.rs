@@ -11,13 +11,13 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 use opentelemetry::{global, KeyValue, trace::Tracer};
 use opentelemetry_sdk::{trace::{self, RandomIdGenerator, Sampler}, Resource};
-use opentelemetry_sdk::metrics::Temporality;
-use opentelemetry_otlp::{Protocol, WithExportConfig, WithTonicConfig};
+use opentelemetry_otlp::{Protocol, WithExportConfig};
 use std::time::Duration;
 
 
 #[tokio::main]
 async fn main() {
+
 
     // トレーシングログの出力設定を行っている。
     tracing_subscriber::registry()
